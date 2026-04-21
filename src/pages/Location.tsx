@@ -19,16 +19,28 @@ const Location = () => {
 
       <section className="luxury-container py-16 md:py-24">
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          <div className="lg:col-span-2 aspect-video rounded-md overflow-hidden border border-border/60 shadow-luxury bg-muted">
+          <a
+            href="https://maps.app.goo.gl/b44jssDxSBV4gt1G9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:col-span-2 aspect-video rounded-md overflow-hidden border border-border/60 shadow-luxury bg-muted block group relative"
+            aria-label={t("common.getDirections")}
+          >
             <iframe
               src={SITE.mapUrl}
               title="Al Mazloum Stud — Map"
-              className="h-full w-full"
+              className="h-full w-full pointer-events-none"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
-          </div>
+            <span className="absolute inset-0 flex items-end justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/40 to-transparent">
+              <span className="bg-gold-gradient text-primary-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-gold flex items-center gap-1.5">
+                <Navigation className="h-3.5 w-3.5" />
+                {t("common.getDirections")}
+              </span>
+            </span>
+          </a>
           <div className="bg-card border border-border/60 rounded-md p-8 shadow-soft flex flex-col">
             <div className="mb-4 flex items-center gap-3">
               <span className="gold-divider" />
