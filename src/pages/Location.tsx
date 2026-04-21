@@ -47,7 +47,7 @@ const Location = () => {
               className="bg-gold-gradient text-primary-foreground hover:opacity-90 shadow-gold border-0 mt-auto"
             >
               <a
-                href="https://maps.google.com/?q=Al+Mazloum+Stud"
+                href="https://maps.app.goo.gl/b44jssDxSBV4gt1G9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
