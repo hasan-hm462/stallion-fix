@@ -27,12 +27,19 @@ export const fetchHorses = async (): Promise<Horse[]> => {
   }
 };
 
+const stripUndefined = <T extends Record<string, any>>(data: T): T =>
+  Object.fromEntries(Object.entries(data).filter(([, v]) => v !== undefined)) as T;
+
 export const createHorse = async (data: Omit<Horse, "id">) => {
-  return addDoc(collection(db, COL), { ...data, createdAt: serverTimestamp(), updatedAt: serverTimestamp() });
+  return addDoc(collection(db, COL), {
+    ...stripUndefined(data),
+    createdAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
+  });
 };
 
 export const updateHorse = async (id: string, data: Partial<Horse>) => {
-  return updateDoc(doc(db, COL, id), { ...data, updatedAt: serverTimestamp() });
+  return updateDoc(doc(db, COL, id), { ...stripUndefined(data), updatedAt: serverTimestamp() });
 };
 
 export const deleteHorse = async (id: string) => deleteDoc(doc(db, COL, id));
