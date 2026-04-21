@@ -6,8 +6,8 @@ export default {
   nav: {
     home: "Home",
     farmHorses: "Farm Horses",
-    bred: "Bred by Al Mazloum Stud",
-    mares: "Mazloum Mares",
+    bred: "Fillys & Coult",
+    mares: "Mares",
     stallions: "Stallions",
     festivals: "Festivals",
     about: "About",
@@ -59,7 +59,7 @@ export default {
       subtitle: "Discover the horses bred and raised at our farm.",
     },
     mares: {
-      title: "Mazloum Mares",
+      title: "Mares",
       subtitle: "The foundation mares that shape our bloodlines.",
     },
     stallions: {
@@ -73,8 +73,8 @@ export default {
   },
   farm: {
     sections: {
-      mares: { title: "Mazloum Mares", subtitle: "Foundation mares that shape our bloodlines." },
-      bred: { title: "Bred by Al Mazloum Stud", subtitle: "Foals and horses born at the stud." },
+      mares: { title: "Mares", subtitle: "Foundation mares that shape our bloodlines." },
+      bred: { title: "Fillys & Coult", subtitle: "Foals and horses born at the stud." },
       other: { title: "Farm Horses", subtitle: "Other horses cared for at the farm." },
     },
   },

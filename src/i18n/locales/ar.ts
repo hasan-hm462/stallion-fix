@@ -6,8 +6,8 @@ export default {
   nav: {
     home: "الرئيسية",
     farmHorses: "أحصنة المزرعة",
-    bred: "من إنتاج المظلوم ستد",
-    mares: "أفراس المظلوم",
+    bred: "Fillys & Coult",
+    mares: "الأفراس",
     stallions: "الفحول",
     festivals: "المهرجانات",
     about: "من نحن",
@@ -53,14 +53,14 @@ export default {
   },
   categories: {
     farm: { title: "أحصنة المزرعة", subtitle: "اكتشف الأحصنة التي وُلدت ورُبّيت في مزرعتنا." },
-    mares: { title: "أفراس المظلوم", subtitle: "أفراس الأساس التي تُشكّل سلالاتنا." },
+    mares: { title: "الأفراس", subtitle: "أفراس الأساس التي تُشكّل سلالاتنا." },
     stallions: { title: "الفحول", subtitle: "قوة، جمال، وأصالة سلالات." },
     festivals: { title: "المهرجانات", subtitle: "ذكريات وفعاليات ولحظات يفتخر بها المربط." },
   },
   farm: {
     sections: {
-      mares: { title: "أفراس المظلوم", subtitle: "أفراس الأساس التي تُشكّل سلالاتنا." },
-      bred: { title: "من إنتاج المظلوم ستد", subtitle: "أحصنة وأمهار وُلدت في المربط." },
+      mares: { title: "الأفراس", subtitle: "أفراس الأساس التي تُشكّل سلالاتنا." },
+      bred: { title: "Fillys & Coult", subtitle: "أحصنة وأمهار وُلدت في المربط." },
       other: { title: "أحصنة المزرعة", subtitle: "أحصنة أخرى تحظى برعايتنا في المزرعة." },
     },
   },
