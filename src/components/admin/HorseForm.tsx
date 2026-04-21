@@ -80,12 +80,19 @@ export const HorseForm = ({ horse, onClose, onSaved }: Props) => {
     }
     setSaving(true);
     try {
-      const payload = {
+      const raw: Record<string, any> = {
         ...form,
         slug: form.slug || slugify(form.name),
-        // Only persist subcategory for farm horses
-        farmSubcategory: form.category === "farm" ? form.farmSubcategory ?? "other" : undefined,
       };
+      if (form.category === "farm") {
+        raw.farmSubcategory = form.farmSubcategory ?? "other";
+      } else {
+        delete raw.farmSubcategory;
+      }
+      // Strip undefined values — Firestore rejects them
+      const payload = Object.fromEntries(
+        Object.entries(raw).filter(([, v]) => v !== undefined)
+      ) as Omit<Horse, "id">;
       if (horse) {
         await updateHorse(horse.id, payload);
         toast.success("Horse updated");
