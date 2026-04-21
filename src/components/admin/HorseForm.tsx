@@ -165,8 +165,8 @@ export const HorseForm = ({ horse, onClose, onSaved }: Props) => {
               >
                 <SelectTrigger className="mt-1.5"><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="mares">Mazloum Mares</SelectItem>
-                  <SelectItem value="bred">Bred by Al Mazloum Stud</SelectItem>
+                  <SelectItem value="mares">Mares</SelectItem>
+                  <SelectItem value="bred">Fillys & Coult</SelectItem>
                   <SelectItem value="other">Other farm horses</SelectItem>
                 </SelectContent>
               </Select>
